@@ -137,8 +137,8 @@
         </p>
       </div>
       <div class="hobby-images">
-        <img src="/mtg-1.jpg" alt="MagicCon event" class="mtg-img" />
-        <img src="/mtg-2.jpg" alt="Commander deck" class="mtg-img" />
+        <img src="/mtg-1.jpg" alt="Josh Lee Kwai and Jimmy Wong" class="mtg-img" />
+        <img src="/mtg-2.jpg" alt="Mark Rosewater" class="mtg-img" />
       </div>
     </div>
   </div>
