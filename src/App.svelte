@@ -6,20 +6,21 @@
   );
 </script>
 
-<!-- ── Hero / Professional Bio ─────────────────────────────── -->
-<section class="border-b border-border py-20 pb-16 md:py-12 md:pb-10">
-  <div class="flex items-start gap-12">
-    <div class="flex-1">
-      <h1 class="text-5xl md:text-4xl sm:text-3xl font-bold text-text-head tracking-tight mb-1">
+<div class="min-h-screen bg-slate-950 text-slate-300 font-sans">
+  <main class="max-w-4xl mx-auto px-6 py-16 md:py-24 space-y-20">
+
+    <!-- ── Hero / Professional Bio ──────────────────────────── -->
+    <section>
+      <h1 class="text-5xl md:text-4xl sm:text-3xl font-bold text-slate-100 tracking-tight mb-2">
         Alex Schiff
       </h1>
-      <p class="text-lg font-medium text-accent-light tracking-wide mb-6">
+      <p class="text-lg font-medium text-cyan-400 tracking-wide mb-6">
         Backend Engineer
       </p>
-      <p class="text-base leading-relaxed max-w-2xl mb-8 text-text-muted">
+      <p class="text-lg leading-relaxed text-slate-400 max-w-2xl mb-8">
         I am a Backend Software Engineer with {yearsExperience} years of experience architecting
         high-throughput, low-latency distributed systems. My expertise is deeply
-        rooted in the JVM ecosystem (Java and Kotlin), having owned and scaled
+        rooted in the JVM ecosystem (<span class="text-cyan-400">Java</span> and <span class="text-cyan-400">Kotlin</span>), having owned and scaled
         critical backend services for General Motors, Ford, Google, and Ally Financial.
       </p>
       <div class="flex flex-wrap gap-3">
@@ -28,9 +29,9 @@
           target="_blank"
           rel="noreferrer"
           aria-label="GitHub profile"
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-bg-card border border-border
-                 text-text-head text-sm font-medium no-underline
-                 transition-all duration-200 hover:border-accent-light hover:shadow-glow hover:bg-bg-surface"
+          class="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium
+                 text-white bg-cyan-600 rounded-lg hover:bg-cyan-500 transition-colors
+                 focus:ring-4 focus:outline-none focus:ring-cyan-900"
         >
           <svg class="w-[18px] h-[18px] shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483
@@ -50,9 +51,9 @@
           target="_blank"
           rel="noreferrer"
           aria-label="LinkedIn profile"
-          class="inline-flex items-center gap-2 px-5 py-2.5 rounded-lg bg-bg-card border border-border
-                 text-text-head text-sm font-medium no-underline
-                 transition-all duration-200 hover:border-accent-light hover:shadow-glow hover:bg-bg-surface"
+          class="inline-flex items-center justify-center gap-2 px-5 py-2.5 text-sm font-medium
+                 text-white bg-cyan-600 rounded-lg hover:bg-cyan-500 transition-colors
+                 focus:ring-4 focus:outline-none focus:ring-cyan-900"
         >
           <svg class="w-[18px] h-[18px] shrink-0" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true">
             <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853
@@ -66,121 +67,122 @@
           LinkedIn
         </a>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
 
-<!-- ── Projects & Speaking ──────────────────────────────────── -->
-<section class="py-16 border-b border-border">
-  <h2 class="text-3xl font-bold text-text-head tracking-tight mb-9">
-    Projects &amp; Speaking
-  </h2>
-  <div class="grid grid-cols-[repeat(auto-fill,minmax(300px,1fr))] gap-5">
+    <!-- ── Projects & Speaking ───────────────────────────────── -->
+    <section>
+      <h2 class="text-3xl font-bold text-slate-100 tracking-tight mb-8">
+        Projects &amp; Speaking
+      </h2>
+      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
 
-    <!-- Card 1 — Speaking (featured) -->
-    <article class="col-span-full flex flex-col gap-3 rounded-card p-7 border border-accent
-                    bg-[linear-gradient(135deg,#20232f_0%,rgba(124,58,237,0.08)_100%)]
-                    transition-all duration-200 hover:shadow-card">
-      <div class="inline-block text-[0.72rem] font-semibold tracking-widest uppercase
-                  text-accent-light bg-accent-glow border border-accent-light/30
-                  rounded px-2 py-0.5 w-fit">
-        Speaking
+        <!-- Card 1 — Speaking (featured) -->
+        <article class="md:col-span-2 flex flex-col gap-3 bg-slate-900 border border-slate-800
+                        rounded-2xl p-6 transition-all duration-300
+                        hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-900/20">
+          <div class="inline-block text-[0.72rem] font-semibold tracking-widest uppercase
+                      text-cyan-400 bg-cyan-950/60 border border-cyan-500/20
+                      rounded px-2 py-0.5 w-fit">
+            Speaking
+          </div>
+          <h3 class="text-lg font-semibold text-slate-100 m-0">
+            Google Cloud Next 2025 Speaker
+          </h3>
+          <p class="text-slate-400 leading-relaxed">
+            Presented a novel approach to distributed tracing by integrating GCP Firestore
+            with the open-source Living Sequence Diagrams project. This architecture allows
+            engineering teams to visualize complex microservice interactions in real-time,
+            drastically reducing debugging time at scale.
+          </p>
+        </article>
+
+        <!-- Card 2 — Open Source -->
+        <article class="flex flex-col gap-3 bg-slate-900 border border-slate-800
+                        rounded-2xl p-6 transition-all duration-300
+                        hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-900/20">
+          <div class="inline-block text-[0.72rem] font-semibold tracking-widest uppercase
+                      text-cyan-400 bg-cyan-950/60 border border-cyan-500/20
+                      rounded px-2 py-0.5 w-fit">
+            Open Source
+          </div>
+          <h3 class="text-lg font-semibold text-slate-100 m-0">k-random</h3>
+          <p class="text-slate-400 leading-relaxed">
+            Created and maintain a <span class="text-cyan-400">Java</span>/<span class="text-cyan-400">Kotlin</span> fork of the deprecated easy-random library
+            for generating complex random test data.
+          </p>
+          <p class="text-sm text-slate-500 italic">
+            Also submitted a talk proposal for KotlinConf 2026 on the experience of
+            migrating this library to Kotlin.
+          </p>
+          <a
+            href="https://github.com/k-random"
+            target="_blank"
+            rel="noreferrer"
+            class="mt-auto text-sm font-medium text-cyan-400 no-underline w-fit
+                   transition-colors duration-200 hover:text-cyan-300"
+          >
+            View on GitHub &rarr;
+          </a>
+        </article>
+
+        <!-- Card 3 — Current Build -->
+        <article class="flex flex-col gap-3 bg-slate-900 border border-slate-800
+                        rounded-2xl p-6 transition-all duration-300
+                        hover:-translate-y-1 hover:border-cyan-500/30 hover:shadow-xl hover:shadow-cyan-900/20">
+          <div class="inline-block text-[0.72rem] font-semibold tracking-widest uppercase
+                      text-cyan-400 bg-cyan-950/60 border border-cyan-500/20
+                      rounded px-2 py-0.5 w-fit">
+            Current Build
+          </div>
+          <h3 class="text-lg font-semibold text-slate-100 m-0">
+            Jira-Integrated Planning Poker
+          </h3>
+          <p class="text-slate-400 leading-relaxed">
+            Currently developing a <span class="text-cyan-400">Kotlin</span>-based planning poker application as a
+            proof-of-concept to drive Kotlin adoption on my team. The architecture
+            utilizes Maven and JUnit 6 to ensure robust, scalable testing and building.
+          </p>
+        </article>
+
       </div>
-      <h3 class="text-lg font-semibold text-text-head m-0">
-        Google Cloud Next 2025 Speaker
-      </h3>
-      <p class="text-text-muted leading-relaxed">
-        Presented a novel approach to distributed tracing by integrating GCP Firestore
-        with the open-source Living Sequence Diagrams project. This architecture allows
-        engineering teams to visualize complex microservice interactions in real-time,
-        drastically reducing debugging time at scale.
-      </p>
-    </article>
+    </section>
 
-    <!-- Card 2 — Open Source -->
-    <article class="flex flex-col gap-3 rounded-card p-7 bg-bg-card border border-border
-                    transition-all duration-200 hover:border-accent hover:shadow-card">
-      <div class="inline-block text-[0.72rem] font-semibold tracking-widest uppercase
-                  text-accent-light bg-accent-glow border border-accent-light/30
-                  rounded px-2 py-0.5 w-fit">
-        Open Source
+    <!-- ── Beyond the Code ──────────────────────────────────── -->
+    <section>
+      <h2 class="text-3xl font-bold text-slate-100 tracking-tight mb-8">
+        Beyond the Code
+      </h2>
+      <div class="flex flex-col md:flex-row gap-10 md:gap-12 items-start">
+        <div class="flex-1">
+          <h3 class="text-xl font-semibold text-slate-100 mb-4">
+            Magic: The Gathering
+          </h3>
+          <p class="text-slate-400 leading-[1.8]">
+            When I'm not writing code, I am an avid Magic: The Gathering player. I spend
+            my free time analyzing card mechanics, attending events like MagicCon, and
+            optimizing decks. My absolute favorite formats are Commander and Commander
+            Draft, where the multiplayer politics and highly variable board states make
+            every game a complex system design puzzle of its own.
+          </p>
+        </div>
+        <div class="grid grid-cols-2 gap-4 w-full md:w-auto md:shrink-0 md:max-w-xs">
+          <img
+            src="/mtg-1.jpg"
+            alt="Josh Lee Kwai and Jimmy Wong"
+            class="rounded-xl object-cover shadow-lg border border-slate-800 aspect-video md:aspect-square w-full"
+          />
+          <img
+            src="/mtg-2.jpg"
+            alt="Mark Rosewater"
+            class="rounded-xl object-cover shadow-lg border border-slate-800 aspect-video md:aspect-square w-full"
+          />
+        </div>
       </div>
-      <h3 class="text-lg font-semibold text-text-head m-0">k-random</h3>
-      <p class="text-text-muted leading-relaxed">
-        Created and maintain a Java/Kotlin fork of the deprecated easy-random library
-        for generating complex random test data.
-      </p>
-      <p class="text-sm text-accent-light italic">
-        Also submitted a talk proposal for KotlinConf 2026 on the experience of
-        migrating this library to Kotlin.
-      </p>
-      <a
-        href="https://github.com/k-random"
-        target="_blank"
-        rel="noreferrer"
-        class="mt-auto text-sm font-medium text-accent-light no-underline w-fit
-               transition-colors duration-200 hover:text-white"
-      >
-        View on GitHub &rarr;
-      </a>
-    </article>
+    </section>
 
-    <!-- Card 3 — Current Build -->
-    <article class="flex flex-col gap-3 rounded-card p-7 bg-bg-card border border-border
-                    transition-all duration-200 hover:border-accent hover:shadow-card">
-      <div class="inline-block text-[0.72rem] font-semibold tracking-widest uppercase
-                  text-accent-light bg-accent-glow border border-accent-light/30
-                  rounded px-2 py-0.5 w-fit">
-        Current Build
-      </div>
-      <h3 class="text-lg font-semibold text-text-head m-0">
-        Jira-Integrated Planning Poker
-      </h3>
-      <p class="text-text-muted leading-relaxed">
-        Currently developing a Kotlin-based planning poker application as a
-        proof-of-concept to drive Kotlin adoption on my team. The architecture
-        utilizes Maven and JUnit 6 to ensure robust, scalable testing and building.
-      </p>
-    </article>
+  </main>
 
-  </div>
-</section>
-
-<!-- ── Beyond the Code ─────────────────────────────────────── -->
-<section class="py-16 border-b border-border bg-bg-surface">
-  <h2 class="text-3xl font-bold text-text-head tracking-tight mb-9">
-    Beyond the Code
-  </h2>
-  <div class="grid grid-cols-2 gap-12 items-start md:grid-cols-1 md:gap-8">
-    <div>
-      <h3 class="text-xl font-semibold text-text-head mb-4">
-        Magic: The Gathering
-      </h3>
-      <p class="text-text-muted leading-[1.8]">
-        When I'm not writing code, I am an avid Magic: The Gathering player. I spend
-        my free time analyzing card mechanics, attending events like MagicCon, and
-        optimizing decks. My absolute favorite formats are Commander and Commander
-        Draft, where the multiplayer politics and highly variable board states make
-        every game a complex system design puzzle of its own.
-      </p>
-    </div>
-    <div class="grid grid-cols-2 gap-4 sm:grid-cols-1">
-      <img
-        src="/mtg-1.jpg"
-        alt="Josh Lee Kwai and Jimmy Wong"
-        class="w-full aspect-[3/4] object-cover rounded-card border border-border bg-bg-card
-               transition-all duration-[250ms] ease-in-out hover:scale-[1.03] hover:shadow-card"
-      />
-      <img
-        src="/mtg-2.jpg"
-        alt="Mark Rosewater"
-        class="w-full aspect-[3/4] object-cover rounded-card border border-border bg-bg-card
-               transition-all duration-[250ms] ease-in-out hover:scale-[1.03] hover:shadow-card"
-      />
-    </div>
-  </div>
-</section>
-
-<footer class="py-8 text-center text-sm text-text-muted">
-  <p>&copy; {new Date().getFullYear()} Alex Schiff</p>
-</footer>
+  <footer class="py-8 text-center text-sm text-slate-600 border-t border-slate-800/60">
+    <p>&copy; {new Date().getFullYear()} Alex Schiff</p>
+  </footer>
+</div>
