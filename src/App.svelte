@@ -35,7 +35,7 @@
 
   <!-- Nav -->
   <header class="sticky top-0 z-50 border-b border-[#252836]/70 bg-[#0d0f18]/85 backdrop-blur-md">
-    <div class="max-w-5xl mx-auto px-6 lg:px-10 h-14 flex items-center justify-between">
+    <div class="max-w-5xl mx-auto px-8 lg:px-10 h-14 flex items-center justify-between">
       <a href="#hero-heading"
          class="text-sm font-semibold text-[#eef0f6] tracking-tight hover:text-white transition-colors duration-200">
         Alex Schiff
@@ -64,10 +64,10 @@
     </div>
   </header>
 
-  <main class="max-w-5xl mx-auto px-6 lg:px-10">
+  <main class="max-w-5xl mx-auto">
 
     <!-- Hero -->
-    <section aria-labelledby="hero-heading" class="pt-24 pb-20 md:pt-32 md:pb-28 relative overflow-hidden">
+    <section aria-labelledby="hero-heading" class="px-8 lg:px-10 pt-24 pb-20 md:pt-32 md:pb-28 relative overflow-hidden">
       <div class="absolute -top-24 -left-24 w-[480px] h-[480px] rounded-full
                   bg-[#7c3aed] opacity-[0.06] blur-[96px] pointer-events-none" aria-hidden="true"></div>
       <div class="absolute top-32 right-0 w-64 h-64 rounded-full
@@ -136,10 +136,10 @@
       </div>
     </section>
 
-    <hr class="border-t border-[#252836]" aria-hidden="true" />
+    <hr class="border-t border-[#252836] mx-8 lg:mx-10" aria-hidden="true" />
 
     <!-- Projects & Speaking -->
-    <section id="projects" aria-labelledby="projects-heading" class="py-20">
+    <section id="projects" aria-labelledby="projects-heading" class="px-8 lg:px-10 py-20">
       <div class="flex items-center gap-3 mb-12">
         <div class="w-[3px] h-6 rounded-full bg-[#7c3aed]" aria-hidden="true"></div>
         <h2 id="projects-heading" class="text-2xl font-bold text-[#eef0f6] tracking-tight">Projects &amp; Speaking</h2>
@@ -260,10 +260,10 @@
       </div>
     </section>
 
-    <hr class="border-t border-[#252836]" aria-hidden="true" />
+    <hr class="border-t border-[#252836] mx-8 lg:mx-10" aria-hidden="true" />
 
     <!-- Beyond the Code -->
-    <section id="beyond" aria-labelledby="beyond-heading" class="py-20">
+    <section id="beyond" aria-labelledby="beyond-heading" class="px-8 lg:px-10 py-20">
       <div class="flex items-center gap-3 mb-12">
         <div class="w-[3px] h-6 rounded-full bg-[#7c3aed]" aria-hidden="true"></div>
         <h2 id="beyond-heading" class="text-2xl font-bold text-[#eef0f6] tracking-tight">Beyond the Code</h2>
@@ -340,7 +340,7 @@
   {/if}
 
   <footer class="border-t border-[#252836]/70 py-8 mt-4">
-    <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3
+    <div class="max-w-4xl mx-auto px-8 flex flex-col sm:flex-row items-center justify-between gap-3
                 text-sm text-[#8b92a5]/45">
       <p>&copy; {new Date().getFullYear()} Alex Schiff</p>
       <nav aria-label="Footer navigation" class="flex items-center gap-5">
