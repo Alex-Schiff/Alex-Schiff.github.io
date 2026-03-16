@@ -36,4 +36,19 @@
     background-color: rgba(124, 58, 237, 0.3);
     color: #f3f4f6;
   }
+
+  /* Disable non-essential animations for users who prefer reduced motion */
+  @media (prefers-reduced-motion: reduce) {
+    :root {
+      scroll-behavior: auto;
+    }
+
+    *,
+    *::before,
+    *::after {
+      animation-duration: 0.01ms !important;
+      animation-iteration-count: 1 !important;
+      transition-duration: 0.01ms !important;
+    }
+  }
 }
