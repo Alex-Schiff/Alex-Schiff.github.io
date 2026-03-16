@@ -6,6 +6,22 @@
   );
 
   const skills = ['Java', 'Kotlin', 'Distributed Systems', 'GCP', 'Microservices', 'JVM'];
+
+  let lightboxSrc = $state<string | null>(null);
+  let lightboxAlt = $state<string>('');
+
+  function openLightbox(src: string, alt: string) {
+    lightboxSrc = src;
+    lightboxAlt = alt;
+  }
+
+  function closeLightbox() {
+    lightboxSrc = null;
+  }
+
+  function handleKeydown(e: KeyboardEvent) {
+    if (e.key === 'Escape') closeLightbox();
+  }
 </script>
 
 <svelte:head>
@@ -267,24 +283,61 @@
             </p>
           </div>
           <div class="grid grid-cols-2 gap-3 w-full md:w-52 md:shrink-0" role="group" aria-label="MagicCon photos">
-            <img
-              src="/mtg-1.jpg"
-              alt="Josh Lee Kwai and Jimmy Wong at MagicCon"
-              class="rounded-xl object-cover shadow-lg border border-[#252836]
-                     aspect-square w-full transition-transform duration-300 hover:scale-[1.04]"
-            />
-            <img
-              src="/mtg-2.jpg"
-              alt="Mark Rosewater at MagicCon"
-              class="rounded-xl object-cover shadow-lg border border-[#252836]
-                     aspect-square w-full transition-transform duration-300 hover:scale-[1.04]"
-            />
+            <button
+              type="button"
+              class="rounded-xl overflow-hidden aspect-square w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7c3aed]"
+              aria-label="View full size: Josh Lee Kwai and Jimmy Wong at MagicCon"
+              onclick={() => openLightbox('/mtg-1.jpg', 'Josh Lee Kwai and Jimmy Wong at MagicCon')}
+            >
+              <img
+                src="/mtg-1.jpg"
+                alt="Josh Lee Kwai and Jimmy Wong at MagicCon"
+                class="rounded-xl object-cover shadow-lg border border-[#252836]
+                       aspect-square w-full transition-transform duration-300 hover:scale-[1.04] cursor-zoom-in"
+              />
+            </button>
+            <button
+              type="button"
+              class="rounded-xl overflow-hidden aspect-square w-full focus:outline-none focus-visible:ring-2 focus-visible:ring-[#7c3aed]"
+              aria-label="View full size: Mark Rosewater at MagicCon"
+              onclick={() => openLightbox('/mtg-2.jpg', 'Mark Rosewater at MagicCon')}
+            >
+              <img
+                src="/mtg-2.jpg"
+                alt="Mark Rosewater at MagicCon"
+                class="rounded-xl object-cover shadow-lg border border-[#252836]
+                       aspect-square w-full transition-transform duration-300 hover:scale-[1.04] cursor-zoom-in"
+              />
+            </button>
           </div>
         </div>
       </div>
     </section>
 
   </main>
+
+  <!-- Lightbox -->
+  {#if lightboxSrc}
+    <!-- Backdrop: clicking it closes the lightbox -->
+    <button
+      type="button"
+      aria-label="Close image"
+      class="fixed inset-0 z-[100] w-full h-full bg-black/80 backdrop-blur-sm cursor-default"
+      onclick={closeLightbox}
+      onkeydown={handleKeydown}
+    ></button>
+    <!-- Image sits above the backdrop and is not interactive -->
+    <div
+      class="fixed inset-0 z-[101] flex items-center justify-center p-4 pointer-events-none"
+      aria-hidden="true"
+    >
+      <img
+        src={lightboxSrc}
+        alt={lightboxAlt}
+        class="max-w-full max-h-full rounded-2xl shadow-2xl object-contain"
+      />
+    </div>
+  {/if}
 
   <footer class="border-t border-[#252836]/70 py-8 mt-4">
     <div class="max-w-4xl mx-auto px-6 flex flex-col sm:flex-row items-center justify-between gap-3
