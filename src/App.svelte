@@ -4,14 +4,22 @@
      Dark-mode-first, responsive CSS grid/flex layout
      ============================================================ -->
 
+<script lang="ts">
+  const startDate = new Date(2014, 3, 1); // April 1st 2014
+  const now = new Date();
+  const yearsExperience = Math.floor(
+    (now.getTime() - startDate.getTime()) / (1000 * 60 * 60 * 24 * 365.25)
+  );
+</script>
+
 <!-- ── Hero / Professional Bio ─────────────────────────────── -->
 <section class="hero-section">
   <div class="hero-inner">
     <div class="hero-text">
       <h1>Alex Schiff</h1>
-      <p class="title-tag">Senior Backend Engineer</p>
+      <p class="title-tag">Backend Engineer</p>
       <p class="bio">
-        I am a Backend Software Engineer with 12 years of experience architecting
+        I am a Backend Software Engineer with {yearsExperience} years of experience architecting
         high-throughput, low-latency distributed systems. My expertise is deeply
         rooted in the JVM ecosystem (Java and Kotlin), having owned and scaled
         critical backend services for General Motors, Ford, Google, and Ally Financial.
@@ -129,8 +137,8 @@
         </p>
       </div>
       <div class="hobby-images">
-        <img src="/mtg-1.jpg" alt="Magic: The Gathering — image 1" class="mtg-img" />
-        <img src="/mtg-2.jpg" alt="Magic: The Gathering — image 2" class="mtg-img" />
+        <img src="/mtg-1.jpg" alt="MagicCon event" class="mtg-img" />
+        <img src="/mtg-2.jpg" alt="Commander deck" class="mtg-img" />
       </div>
     </div>
   </div>
