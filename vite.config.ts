@@ -6,7 +6,7 @@ export default defineConfig({
   plugins: [svelte()],
   server: {
     host: true,
-    allowedHosts: 'all',
+    allowedHosts: true,
     strictPort: false,
   },
 })
