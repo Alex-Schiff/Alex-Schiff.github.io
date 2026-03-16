@@ -35,7 +35,7 @@
 
   <!-- Nav -->
   <header class="sticky top-0 z-50 border-b border-[#252836]/70 bg-[#0d0f18]/85 backdrop-blur-md">
-    <div class="max-w-4xl mx-auto px-6 h-14 flex items-center justify-between">
+    <div class="max-w-5xl mx-auto px-6 lg:px-10 h-14 flex items-center justify-between">
       <a href="#hero-heading"
          class="text-sm font-semibold text-[#eef0f6] tracking-tight hover:text-white transition-colors duration-200">
         Alex Schiff
@@ -64,7 +64,7 @@
     </div>
   </header>
 
-  <main class="max-w-4xl mx-auto px-6">
+  <main class="max-w-5xl mx-auto px-6 lg:px-10">
 
     <!-- Hero -->
     <section aria-labelledby="hero-heading" class="pt-24 pb-20 md:pt-32 md:pb-28 relative overflow-hidden">
